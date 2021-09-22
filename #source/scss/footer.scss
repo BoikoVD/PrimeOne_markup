@@ -1,0 +1,44 @@
+footer{}
+//====================================================================================================
+.footer {
+	@include flexbox();
+	align-items: center;
+	justify-content: space-between;
+	height: 125px;
+	@media (max-width:$md2+px){
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+	&__column {
+		@media (max-width:$md2+px){
+			&:first-child{
+				@include flexorder(2);
+			}
+			&:last-child{
+				@include flexorder(1);
+			}
+		}
+	}
+	&__text {
+		font-size: 15px;
+		line-height: 25px;
+		color: #4d4d4d;
+		@media (max-width:$md2+px){
+			text-align: center;
+		}
+		a{
+			text-decoration: underline;
+			color: #4d4d4d;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	&__logo {
+		img{
+			height: 45px;
+		}
+	}
+}
+//====================================================================================================
+

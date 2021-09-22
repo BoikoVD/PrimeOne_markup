@@ -1,0 +1,96 @@
+//<FORM>====================================================================================================
+.form{}
+.form-row{@include flexbox();margin: 0px -15px;}
+.form__column{padding: 0px 15px;}
+.form-input{}
+.form-button{}
+//</FORM>====================================================================================================
+
+//<BUTTONS>====================================================================================================
+.btn{
+	display: inline-block;
+	padding: 0px 0px;
+	font-family: Bebas;
+	font-size: 15px;
+	line-height: 15px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	padding: 18px 34px;
+	@include anim(0.4s,0s);
+	@media (max-width:$md2+px){
+		font-size: 13px;
+		line-height: 13px;
+	}
+	&:hover{
+		-webkit-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	&.fw{width: 100%;}
+
+	&_w {
+		color: #000;
+		background-color: #fff;
+	}
+	&_b {
+		color: #fff;
+		background-color: #000;
+	}
+}
+.btn-menu {
+	display: inline-block;
+	font-family: Bebas;
+	font-size: 15px;
+	line-height: 15px;
+	text-decoration: underline;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	@include anim(0.4s,0s);
+	@media (max-width:$md2+px){
+		font-size: 13px;
+		line-height: 13px;
+	}
+	&:hover{
+		text-decoration: underline;
+		-webkit-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+
+	&_w {
+		color: #fff;
+		@media (max-width:$md2+px){
+			max-width: 45px;
+			text-align: center;
+		}
+		@media (max-width:$md3+px){
+			max-width: none;
+		}
+	}
+	&_b {
+		color: #000;
+	}
+}
+//<INPUT>====================================================================================================
+input[type=text],input[type=email],input[type=tel],textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+.input{
+	border-radius: 0 !important;
+	border: 2px solid #959595;
+	background-color: #252525;
+	width: 100%;
+	height: 50px;
+	display: block;
+	padding: 0px 18px;
+	font-size: 15px;
+	line-height: 25px;
+	color: #959595;
+	&.focus{}
+	&.err{
+		border: 2px solid red;
+	}
+}
+textarea.input{
+	resize:none;
+	height: 100px;
+	padding: 10px 18px;
+}
